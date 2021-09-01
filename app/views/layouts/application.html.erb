@@ -10,7 +10,33 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+<%# 
+  Define your css assets per controller and controller_action
+  app/stylesheets/controllers/<your controller name> 
+
+  Eg: app/stylesheets/controllers/password_resets.css.scss
+
+  body.password_resets  {
+
+    // index 
+    .index { 		//your awesome css code for index 
+    }
+    // show 
+    .show { 		//your awesome css code for show 
+    }
+    // new
+    .new { 		//your awesome css code for new 
+    }
+    // create
+    .create { 		//your awesome css code for create 
+    }
+  }
+
+%> 
+
+  <body class=<%= "#{controller.controller_path.parameterize.gsub('-', '_')}" %> >
+    <div class=<%= "#{controller.action_name}" %>>
+      <%= yield %>
+    </div>
   </body>
 </html>
