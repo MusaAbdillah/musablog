@@ -16,4 +16,6 @@ development:
 
 production:
   <<: *default
+  username: musa_blog
+  password: <%= ENV['MUSA_BLOG_DATABASE_PASSWORD'] %>
   database: musa_blog_production
