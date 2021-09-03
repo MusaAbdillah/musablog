@@ -18,7 +18,7 @@
 
   <div class="row">
     <div class="col-sm">
-      <p>blog image goes here!</p>
+      <%= image_tag(blog.image || asset_url("default_image_blog.png"), :class => "img-thumbnail") %>
     </div>
     <div class="col-sm">
       <%= link_to blog.title, blog %>
