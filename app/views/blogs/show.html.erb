@@ -7,7 +7,7 @@
       
     </div>
     <div class="col-sm">
-      <%= image_tag(@user.avatar, :class => "img-thumbnail") %>
+      <%= image_tag(@user.avatar, :class => "img-thumbnail rounded-circle") %>
       <%= @user.name %>
     </div>
     <div class="col-sm">
@@ -20,7 +20,7 @@
       <h3><%= @blog.title %></h3>
       <p><%= @blog.created_at %></p>
 
-      <%= image_tag(@blog.image || asset_url("default_image_blog.png"), :class => "img-thumbnail") %>
+      <%= image_tag(@blog.image || asset_url("default_image_blog.png"), :class => "img-thumbnail rounded-0") %>
 
       <%= @blog.body.html_safe %>
     </div>
