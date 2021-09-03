@@ -1,13 +1,29 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+<div class="container">
+  <!-- Content here -->
+  <%# users container %>
+  <div class="row">
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+      <%= image_tag(@user.avatar, :class => "img-thumbnail") %>
+      <%= @user.name %>
+    </div>
+    <div class="col-sm">
+      
+    </div>
+  </div>
+<%#  blog container  %>
+  <div class="row">
+     <div class="col-sm">
+      <h3><%= @blog.title %></h3>
+      <p><%= @blog.created_at %></p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body %>
-</p>
+      <%= image_tag(@blog.image || asset_url("default_image_blog.png"), :class => "img-thumbnail") %>
 
+      <%= @blog.body %>
+    </div>
+  </div>
 <%= link_to 'Back', blogs_path %>
+</div>
