@@ -3,6 +3,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs or /blogs.json
   def index
+    @user = User.first
     @blogs = Blog.all
   end
 
