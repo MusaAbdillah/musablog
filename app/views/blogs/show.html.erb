@@ -22,7 +22,7 @@
 
       <%= image_tag(@blog.image || asset_url("default_image_blog.png"), :class => "img-thumbnail") %>
 
-      <%= @blog.body %>
+      <%= @blog.body.html_safe %>
     </div>
   </div>
 <%= link_to 'Back', blogs_path %>
