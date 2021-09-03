@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'pg'
 gem 'rails_admin', '~> 2.0'
+gem 'ckeditor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
