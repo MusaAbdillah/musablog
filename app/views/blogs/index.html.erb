@@ -1,29 +1,26 @@
 <div class="container">
   <!-- Content here -->
   <%# users container %>
-  <div class="row">
-    <div class="col-sm">
-      
-    </div>
-    <div class="col-sm">
+  <div class="row justify-content-md-center">
+    <div class="col-sm-4">
       <%= image_tag(@user.avatar, :class => "img-thumbnail rounded-circle") %>
-      <%= @user.name %>
-    </div>
-    <div class="col-sm">
-      
+      <h4 class="blogger_name"><%= @user.name %></h4>
     </div>
   </div>
 <%#  blogs container  %>
+    <div class="row">
     <% @blogs.each do |blog| %>
-
-  <div class="row">
-    <div class="col-sm">
-      <%= image_tag(blog.image || asset_url("default_image_blog.png"), :class => "img-thumbnail rounded-0") %>
+      <div class="col-sm-4">
+          <div class="thumbnail">
+            <%= link_to(blog) do %>
+              <%= image_tag(blog.image || asset_url("default_image_blog.png"), :style => "width:100%") %>
+              <div class="caption">
+                <h3><%= blog.title %></h3>
+              </div>
+            <% end %>
+          </div>
+      </div>
+      <% end %>
     </div>
-    <div class="col-sm">
-      <%= link_to blog.title, blog %>
-    </div>
-  </div>
-<% end %>
 
 </div>
