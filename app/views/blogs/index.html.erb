@@ -3,24 +3,27 @@
   <%# users container %>
   <div class="row justify-content-md-center">
     <div class="col-sm-4">
-      <%= image_tag(@user.avatar, :class => "img-thumbnail rounded-circle") %>
-      <h4 class="blogger_name"><%= @user.name %></h4>
+  
+      <%= image_tag(@user.avatar, :class => "blogger_avatar") %>
+      <p class="blogger_name"><%= @user.name.upcase %></p>
+  
     </div>
   </div>
 <%#  blogs container  %>
-    <div class="row">
-    <% @blogs.each do |blog| %>
-      <div class="col-sm-4">
-          <div class="thumbnail">
-            <%= link_to(blog) do %>
-              <%= image_tag(blog.image || asset_url("default_image_blog.png"), :style => "width:100%") %>
-              <div class="caption">
-                <h3><%= blog.title %></h3>
-              </div>
-            <% end %>
+  <% @blogs.each do |blog| %>
+      <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+          <%= link_to blog do %>
+          <div class="card mb-3">
+            <div class="card-header"><%= blog.created_at.strftime("%B %d, %Y") %></div>
+            <div class="card-body">
+              <h5 class="card-title"><%= blog.title %></h5>
+              <p class="card-text"><%= truncate(blog.body.html_safe, length: 300, escape: false) %></p>
+            </div>
           </div>
+          <% end %>
+        </div>
       </div>
-      <% end %>
-    </div>
+  <% end %>
 
 </div>
