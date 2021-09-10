@@ -3,8 +3,10 @@
   <%# users container %>
   <div class="row justify-content-md-center">
     <div class="col-sm-4">
-      <%= image_tag(@user.avatar, :class => "img-thumbnail rounded-circle") %>
-      <h4 class="blogger_name"><%= @user.name %></h4>
+  
+      <%= image_tag(@user.avatar, :class => "blogger_avatar") %>
+      <p class="blogger_name"><%= @user.name.upcase %></p>
+  
     </div>
   </div>
 <%#  blogs container  %>
