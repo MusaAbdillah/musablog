@@ -40,6 +40,14 @@ body.blogs {
   .show {
     //your awesome css code for show
 
+    // .row {
+    //   border: 1px solid black;
+
+    //   .col-sm-4 {
+    //     border: 1px solid black;
+    //   }
+    // }
+
     .blogger_avatar {
       width: 50px;
       height: 50px;
@@ -50,6 +58,10 @@ body.blogs {
     .blogger_name {
       text-align: center;
       font-weight: bold;
+    }
+
+    .row .col-sm-6 {
+      text-align: center;
     }
   }
   // new

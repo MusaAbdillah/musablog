@@ -11,10 +11,10 @@
     </div>
   </div>
 <%#  blog container  %>
-  <div class="row">
-     <div class="col-sm">
+  <div class="row justify-content-md-center">
+     <div class="col-sm-6 col-sm-offset-3">
+      <p><%= @blog.created_at.strftime("%B %d, %Y") %></p>
       <h3><%= @blog.title %></h3>
-      <p><%= @blog.created_at %></p>
 
       <%= image_tag(@blog.image || asset_url("default_image_blog.png"), :class => "img-thumbnail rounded-0") %>
 
