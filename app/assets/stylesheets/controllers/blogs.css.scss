@@ -39,6 +39,18 @@ body.blogs {
   // show
   .show {
     //your awesome css code for show
+
+    .blogger_avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: auto;
+      display: block;
+    }
+    .blogger_name {
+      text-align: center;
+      font-weight: bold;
+    }
   }
   // new
   .new {
