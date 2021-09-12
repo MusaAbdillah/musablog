@@ -84,6 +84,10 @@ GEM
       orm_adapter (~> 0.5.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     ffi (1.15.3)
     globalid (0.4.2)
@@ -254,6 +258,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   ckeditor
+  dotenv-rails
   jbuilder (~> 2.7)
   kaminari
   listen (~> 3.3)
