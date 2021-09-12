@@ -2,6 +2,13 @@ require "nested_form/engine"
 require "nested_form/builder_mixin"
 RailsAdmin.config do |config|
 
+  config.authorize_with do
+    authenticate_or_request_with_http_basic('Login required') do |username, password|
+      username == ENV['RAILS_ADMIN_USER'] &&
+      password == ENV['RAILS_ADMIN_PASSWORD']
+    end
+  end
+
   ### Popular gems integration
 
   ## == Devise ==

@@ -2,28 +2,25 @@
 <div class="container">
   <!-- Content here -->
   <%# users container %>
-  <div class="row">
-    <div class="col-sm">
-      
-    </div>
-    <div class="col-sm">
-      <%= image_tag(@user.avatar, :class => "img-thumbnail rounded-circle") %>
-      <%= @user.name %>
-    </div>
-    <div class="col-sm">
-      
+  <div class="row justify-content-md-center">
+    <div class="col-sm-4">
+  
+      <%= image_tag(@user.avatar, :class => "blogger_avatar") %>
+      <p class="blogger_name"><%= @user.name.upcase %></p>
+  
     </div>
   </div>
 <%#  blog container  %>
-  <div class="row">
-     <div class="col-sm">
+  <div class="row justify-content-md-center">
+     <div class="col-sm-6 col-sm-offset-3">
+      <p><%= @blog.created_at.strftime("%B %d, %Y") %></p>
       <h3><%= @blog.title %></h3>
-      <p><%= @blog.created_at %></p>
 
       <%= image_tag(@blog.image || asset_url("default_image_blog.png"), :class => "img-thumbnail rounded-0") %>
 
       <%= @blog.body.html_safe %>
+      <%= button_to 'Back', blogs_path, method: :get %>
     </div>
   </div>
-<%= link_to 'Back', blogs_path %>
+
 </div>
