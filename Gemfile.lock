@@ -132,10 +132,6 @@ GEM
     nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    nokogiri (1.11.7-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.11.7-x86_64-linux)
-      racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.2.3)
     public_suffix (4.0.6)
@@ -259,6 +255,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   ckeditor
   jbuilder (~> 2.7)
+  kaminari
   listen (~> 3.3)
   pg
   puma (~> 5.0)
