@@ -17,8 +17,9 @@
       <h3><%= @blog.title %></h3>
 
       <%= image_tag(@blog.image || asset_url("default_image_blog.png"), :class => "img-thumbnail rounded-0") %>
-
-      <%= @blog.body.html_safe %>
+      <div class="blog_body">
+        <%= @blog.body.html_safe %>
+      </div>
       <%= button_to 'Back', blogs_path, method: :get %>
     </div>
   </div>
