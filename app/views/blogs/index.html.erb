@@ -18,7 +18,10 @@
             <div class="card-header"><%= blog.created_at.strftime("%B %d, %Y") %></div>
             <div class="card-body">
               <h5 class="card-title"><%= blog.title %></h5>
-              <p class="card-text"><%= truncate(blog.body.html_safe, length: 300, escape: false) %></p>
+              <div class="blog_body">
+                <%= truncate(blog.body.html_safe, length: 300, escape: false) %>
+              </div>
+              <%=  %>
             </div>
           </div>
           <% end %>
